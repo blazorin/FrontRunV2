@@ -1,0 +1,23 @@
+{
+  "config_name": "Exchanges",
+  "exchanges": [
+    {
+      "name": "QuickSwap",
+      "fee": 0.1,
+      "router_addr": "0xa5E0829CaCEd8fFDD4De3c43696c57F7D7A678ff",
+      "factory_addr": "0x5757371414417b8C6CAad45bAeF941aBc7d3Ab32",
+      "router_functions": {
+        "getFactory": {"name":  "factory", "mode": "single", "type": "int"}
+      },
+      "pair_functions": {
+        "getReserves": {"name":  "getReserves", "mode": "array", "output": {"reserve0": {"place": 0, "type": "int"}, "reserve1": {"place": 1, "type":  "int"}, "_blockTimestampLast": {"place":  2, "type":  "int"} } },
+        "token0": {"name":  "token0", "mode": "single", "type": "int" },
+        "token1": {"name":  "token1", "mode": "single", "type": "int" }
+      },
+      "token_functions": {
+        "getDecimals": {"name":  "decimals", "mode": "single", "type": "int" },
+        "getSymbol": {"name":  "symbol", "mode": "single", "type": "string" }
+      }
+    }
+  ]
+}
